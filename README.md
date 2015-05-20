@@ -57,8 +57,8 @@ somewhere.
 
 #### NPM
 ```bash
-$ npm i -g realizehit
-$ DEBUG=* realizehit
+npm i -g realizehit
+DEBUG=* realizehit
 
 realizehit:WebSocketServer: listening on port 8080
 realizehit:RestServer: listening on port 3000
@@ -66,8 +66,8 @@ realizehit:RestServer: listening on port 3000
 
 #### Docker
 ```bash
-$ docker build -t realizehit/realizehit .
-$ docker run -d -p 80:8080 81:3000 realizehit/realizehit
+docker build -t realizehit/realizehit .
+docker run -d -p 80:8080 81:3000 realizehit/realizehit
 ```
 
 
@@ -75,11 +75,11 @@ $ docker run -d -p 80:8080 81:3000 realizehit/realizehit
 ## API Usage
 
 * [api-js-client]
-* [websocket-js-client]
+* [socket-js-client]
 
 
 
 ## Server Usage
 
 * [api-server]
-* [websocket-server]
+* [socket-server]
