@@ -1,6 +1,6 @@
 # realizehit
 
-a better realtime comm library for your apps
+a better realtime library for your apps
 
 
 We believe that we should not being trapped on `channel/event` approach like
