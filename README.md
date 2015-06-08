@@ -2,6 +2,7 @@
 
 a better realtime library for your apps
 
+![Logo](https://raw.githubusercontent.com/realizehit/presskit/master/logo/icons/512x512/icon_g.png)
 
 We believe that we should not being trapped on `channel/event` approach like
 *Pusher* is, so we adopted for an **your app, your rules** approach.
