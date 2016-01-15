@@ -75,12 +75,12 @@ docker run -d -p 80:8080 81:3000 realizehit/realizehit
 
 ## API Usage
 
-* [api-js-client]
-* [socket-js-client]
+* [client-api.js](https://github.com/realizehit/client-api.js)
+* [client-socket.js](https://github.com/realizehit/client-socket.js)
 
 
 
 ## Server Usage
 
-* [api-server]
-* [socket-server]
+* [server-api](https://github.com/realizehit/server-api)
+* [server-socket](https://github.com/realizehit/server-socket)
