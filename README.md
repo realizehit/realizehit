@@ -1,5 +1,5 @@
 <a href="http://github.com/realizehit/realizehit">
-    <img src="https://raw.githubusercontent.com/realizehit/presskit/master/logo/icons/512x512/icon_g.png" alt="realizehit logo" align="left" width=75px />
+    <img src="https://raw.githubusercontent.com/realizehit/presskit/master/logo/icons/512x512/icon_g.png" alt="realizehit logo" align="left" width=96px />
 </a>
 
 # realizehit
