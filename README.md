@@ -4,7 +4,7 @@
 
 # realizehit
 
-a better realtime library for your apps
+**an enhanced and scalable websocket system to your project**
 
 
 We believe that we should not being trapped on `channel/event` approach like
