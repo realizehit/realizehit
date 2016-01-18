@@ -1,0 +1,36 @@
+{
+  "name": "realizehit",
+  "version": "0.0.0",
+  "description": "realizehit server",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test-jshint": "jshint .",
+    "test-mocha": "mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter spec $(find test/* -name '*.test.js')",
+    "test": "for kind in jshint mocha; do npm run test-$kind; [ $? -ne 0 ] && exit 1; done; exit 0",
+    "preversion": "docker ps > /dev/null && npm test",
+    "postversion": "git push origin master && git push origin --tags && npm publish && npm run build-docker && npm run publish-docker && npm run publish-docker-latest",
+    "build-docker": "docker build -t realizehit/realizehit:$npm_package_version .",
+    "start-docker": "docker run -ti realizehit/realizehit:$npm_package_version",
+    "publish-docker": "docker push realizehit/realizehit:$npm_package_version",
+    "publish-docker-latest": "docker tag -f realizehit/realizehit:$npm_package_version realizehit/realizehit:latest && docker push realizehit/realizehit:latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realizehit/realizehit.git"
+  },
+  "keywords": [
+    "realizehit",
+    "api",
+    "server",
+    "redis"
+  ],
+  "author": "José Moreira <jose.moreira@findhit.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/realizehit/realizehit/issues"
+  },
+  "homepage": "https://github.com/realizehit/realizehit#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}

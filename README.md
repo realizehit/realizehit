@@ -7,7 +7,9 @@ a better realtime library for your apps
 We believe that we should not being trapped on `channel/event` approach like
 *Pusher* is, so we adopted for an **your app, your rules** approach.
 
-
+## WIP
+This project is currently being developed, watch and rate this repo for future
+acknowledge. 
 
 ## History
 
@@ -52,35 +54,58 @@ support for:
 Since **realizehit** is a stateless service, we must have a `redis` server running
 somewhere.
 
+## Usage
 
+#### (Not Implemented Yet) Run on command-line
 
-## Installation
-
-#### NPM
 ```bash
-npm i -g realizehit
-DEBUG=* realizehit
-
-realizehit:WebSocketServer: listening on port 8080
-realizehit:RestServer: listening on port 3000
+npm install -g realizehit
+realizehit
 ```
 
-#### Docker
+#### Run as NPM module
+
 ```bash
-docker build -t realizehit/realizehit .
-docker run -d -p 80:8080 81:3000 realizehit/realizehit
+npm install --save realizehit
+```
+
+```javascript
+var RealizehitServer = require( 'realizehit' )
+
+var server = new RealizehitServer({
+    httpPort: '8080',
+    redis: 'redis://redis.ip.or.hostname:6379'
+})
+```
+
+#### Run with Docker
+
+```bash
+docker run -d --name=redis redis
+docker run -d \
+    --name=realizehit-server \
+    -p 8080:8080 \
+    -e REDIS_URI="redis://redis:6379" \
+    --link redis:redis \
+    realizehit/realizehit
 ```
 
 
+## Other repositories directly related with this
 
-## API Usage
+### Clients
+
+#### Javascript
 
 * [client-api.js](https://github.com/realizehit/client-api.js)
 * [client-socket.js](https://github.com/realizehit/client-socket.js)
 
+#### Others
 
+Have you ported our client into another language? PR us and we will publish them
+here! :)
 
-## Server Usage
+## Servers
 
 * [server-api](https://github.com/realizehit/server-api)
 * [server-socket](https://github.com/realizehit/server-socket)
