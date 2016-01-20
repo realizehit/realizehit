@@ -31,6 +31,9 @@
     "url": "https://github.com/realizehit/realizehit/issues"
   },
   "homepage": "https://github.com/realizehit/realizehit#readme",
-  "dependencies": {},
+  "dependencies": {
+    "realizehit-server-api": "^1.0.1",
+    "realizehit-server-ws": "^0.3.0"
+  },
   "devDependencies": {}
 }

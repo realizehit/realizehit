@@ -12,7 +12,7 @@ We believe that we should not being trapped on `channel/event` approach like
 
 ## WIP
 This project is currently being developed, watch and rate this repo for future
-acknowledge. 
+acknowledge.
 
 ## History
 
@@ -100,8 +100,8 @@ docker run -d \
 
 #### Javascript
 
-* [client-api.js](https://github.com/realizehit/client-api.js)
-* [client-socket.js](https://github.com/realizehit/client-socket.js)
+* [client-api.js](https://github.com/realizehit/client-api.js) [![Build Status](https://travis-ci.org/realizehit/client-api.js.svg?branch=master)](https://travis-ci.org/realizehit/client-api.js)
+* [client-socket.js](https://github.com/realizehit/client-socket.js) [![Build Status](https://travis-ci.org/realizehit/client-socket.js.svg?branch=master)](https://travis-ci.org/realizehit/client-socket.js)
 
 #### Others
 
@@ -110,5 +110,5 @@ here! :)
 
 ## Servers
 
-* [server-api](https://github.com/realizehit/server-api)
-* [server-socket](https://github.com/realizehit/server-socket)
+* [server-api](https://github.com/realizehit/server-api) [![Build Status](https://travis-ci.org/realizehit/server-api.svg?branch=master)](https://travis-ci.org/realizehit/server-api)
+* [server-socket](https://github.com/realizehit/server-socket) [![Build Status](https://travis-ci.org/realizehit/server-socket.svg?branch=master)](https://travis-ci.org/realizehit/server-socket)
