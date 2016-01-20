@@ -2,7 +2,7 @@
     <img src="https://raw.githubusercontent.com/realizehit/presskit/master/logo/icons/512x512/icon_g.png" alt="realizehit logo" align="left" width=96px />
 </a>
 
-# realizehit
+# realizehit [![Build Status](https://travis-ci.org/realizehit/realizehit.svg?branch=master)](https://travis-ci.org/realizehit/realizehit)
 
 **an enhanced and scalable websocket system for your project**
 
