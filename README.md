@@ -96,19 +96,17 @@ docker run -d \
 
 ## Other repositories directly related with this
 
-### Clients
+### Servers
 
-#### Javascript
+#### [server-api](https://github.com/realizehit/server-api) [![Build Status](https://travis-ci.org/realizehit/server-api.svg?branch=master)](https://travis-ci.org/realizehit/server-api)
+#### [server-ws](https://github.com/realizehit/server-ws) [![Build Status](https://travis-ci.org/realizehit/server-ws.svg?branch=master)](https://travis-ci.org/realizehit/server-ws)
 
-* [client-api.js](https://github.com/realizehit/client-api.js) [![Build Status](https://travis-ci.org/realizehit/client-api.js.svg?branch=master)](https://travis-ci.org/realizehit/client-api.js)
-* [client-socket.js](https://github.com/realizehit/client-socket.js) [![Build Status](https://travis-ci.org/realizehit/client-socket.js.svg?branch=master)](https://travis-ci.org/realizehit/client-socket.js)
+### Javascript Clients
 
-#### Others
+#### [client-api.js](https://github.com/realizehit/client-api.js) [![Build Status](https://travis-ci.org/realizehit/client-api.js.svg?branch=master)](https://travis-ci.org/realizehit/client-api.js)
+#### [client-socket.js](https://github.com/realizehit/client-socket.js) [![Build Status](https://travis-ci.org/realizehit/client-socket.js.svg?branch=master)](https://travis-ci.org/realizehit/client-socket.js)
 
-Have you ported our client into another language? PR us and we will publish them
+### Others
+
+Have you ported a client into another language? PR us and we will publish them
 here! :)
-
-## Servers
-
-* [server-api](https://github.com/realizehit/server-api) [![Build Status](https://travis-ci.org/realizehit/server-api.svg?branch=master)](https://travis-ci.org/realizehit/server-api)
-* [server-socket](https://github.com/realizehit/server-socket) [![Build Status](https://travis-ci.org/realizehit/server-socket.svg?branch=master)](https://travis-ci.org/realizehit/server-socket)
