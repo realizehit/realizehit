@@ -2,7 +2,7 @@
   "name": "realizehit",
   "version": "0.0.0",
   "description": "realizehit server",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "node server.js",
     "test-jshint": "jshint .",
@@ -35,5 +35,9 @@
     "realizehit-server-api": "^1.0.1",
     "realizehit-server-ws": "^0.3.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "jshint": "^2.9.1",
+    "mocha": "^2.3.4"
+  }
 }
