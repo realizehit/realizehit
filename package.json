@@ -2,7 +2,7 @@
   "name": "realizehit",
   "version": "0.0.0",
   "description": "realizehit server",
-  "main": "lib/server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "test-jshint": "jshint .",
