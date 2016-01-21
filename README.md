@@ -6,13 +6,31 @@
 
 **an enhanced and scalable websocket system for your project**
 
+## Current development status: Help Wanted!
 
-We believe that we should not being trapped on `channel/event` approach like
-*Pusher* is, so we adopted for an **your app, your rules** approach.
-
-## WIP
-This project is currently being developed, watch and rate this repo for future
+This project is currently on a developing stage, watch and rate this repo for future
 acknowledge.
+
+**We need your help to write clients on other languages!!**
+
+* [x] [Websocket Server](https://github.com/realizehit/server-api)
+* [x] [API Server](https://github.com/realizehit/server-ws)
+* [-] [JS API Client](https://github.com/realizehit/client-api.js) (WIP @cusspvz)
+* [-] [JS Websocket Client](https://github.com/realizehit/client-ws.js) (WIP @cusspvz)
+* [ ] PHP API Client
+* [ ] PHP Websocket Client
+* [ ] Python API Client
+* [ ] Python Websocket Client
+* [ ] Ruby API Client
+* [ ] Ruby Websocket Client
+* [ ] JAVA API Client
+* [ ] JAVA Websocket Client
+* [ ] Perl API Client
+* [ ] Perl Websocket Client
+* [ ] Go API Client
+* [ ] Go Websocket Client
+
+Want to contribute with your knowledge? [Contact me by email](mailto:jose.moreira@findhit.com)
 
 ## History
 
