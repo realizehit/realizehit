@@ -13,10 +13,10 @@ acknowledge.
 
 **We need your help to write clients on other languages!!**
 
-* [x] [Websocket Server](https://github.com/realizehit/server-api)
-* [x] [API Server](https://github.com/realizehit/server-ws)
-* [-] [JS API Client](https://github.com/realizehit/client-api.js) (WIP @cusspvz)
-* [-] [JS Websocket Client](https://github.com/realizehit/client-ws.js) (WIP @cusspvz)
+* [x] [Websocket Server](https://github.com/realizehit/server-ws)
+* [x] [API Server](https://github.com/realizehit/server-api)
+* [ ] [JS API Client](https://github.com/realizehit/client-api.js) (WIP @cusspvz)
+* [ ] [JS Websocket Client](https://github.com/realizehit/client-ws.js) (WIP @cusspvz)
 * [ ] PHP API Client
 * [ ] PHP Websocket Client
 * [ ] Python API Client
