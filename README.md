@@ -15,7 +15,7 @@ acknowledge.
 
 * [x] [Websocket Server](https://github.com/realizehit/server-ws)
 * [x] [API Server](https://github.com/realizehit/server-api)
-* [ ] [JS API Client](https://github.com/realizehit/client-api.js) (WIP @cusspvz)
+* [x] [JS API Client](https://github.com/realizehit/client-api.js)
 * [ ] [JS Websocket Client](https://github.com/realizehit/client-ws.js) (WIP @cusspvz)
 * [ ] PHP API Client
 * [ ] PHP Websocket Client
