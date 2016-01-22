@@ -122,7 +122,7 @@ docker run -d \
 ### Javascript Clients
 
 #### [client-api.js](https://github.com/realizehit/client-api.js) [![Build Status](https://travis-ci.org/realizehit/client-api.js.svg?branch=master)](https://travis-ci.org/realizehit/client-api.js)
-#### [client-socket.js](https://github.com/realizehit/client-socket.js) [![Build Status](https://travis-ci.org/realizehit/client-socket.js.svg?branch=master)](https://travis-ci.org/realizehit/client-socket.js)
+#### [client-socket.js](https://github.com/realizehit/client-ws.js) [![Build Status](https://travis-ci.org/realizehit/client-ws.js.svg?branch=master)](https://travis-ci.org/realizehit/client-ws.js)
 
 ### Others
 
