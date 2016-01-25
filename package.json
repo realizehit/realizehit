@@ -32,6 +32,8 @@
   },
   "homepage": "https://github.com/realizehit/realizehit#readme",
   "dependencies": {
+    "realizehit-client-api": "^0.1.1",
+    "realizehit-client-ws": "0.0.1",
     "realizehit-server-api": "^1.0.1",
     "realizehit-server-ws": "^0.3.0"
   },
