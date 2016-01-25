@@ -4,7 +4,33 @@
 
 # realizehit [![Build Status](https://travis-ci.org/realizehit/realizehit.svg?branch=master)](https://travis-ci.org/realizehit/realizehit)
 
-**an enhanced and scalable websocket system for your project**
+**an enhanced and scalable uni-directional websocket system for your project**
+
+```
++--------+    +--------+    +--------+    +--------+    +--------+
+| API    | -> | API    | -> | Redis  | -> | WS     | -> | WS     |
+| Client |    | Server |    | Server |    | Server |    | Client |
++--------+    +--------+    +--------+    +--------+    +--------+
++Scallable    +Scallable    +Scallable    +Scallable    +Scallable
+
+// Pub/Sub example case under the hood, since the first connecting stage:
+
+1. API Client from within your app connects with one of the available API servers;
+2. WS Client on your frontend connects with one of the available WS servers;
+3. WS Client asks WS Server to subscribe into `{ "foo": "bar" }`;
+4. WS Server creates a Subscription based on pattern { foo:bar } and sets it as
+   active, which will also make WS Server to subscribe to `Redis`;
+5. WS Server responds to WS Client confirming it would now receive payloads
+   from the requested subscription;
+6. Your app needs to send a payload to `{ "foo": "bar" }` because `foo`
+   went to a `bar`, using API Client, it sends the payload `drunk`;
+7. API Server handles the request and publishes it to Redis Server;
+8. WS Server receives payload **BECAUSE IT HAS A CLIENT NEEDING IT**, which means
+   other servers on the network won't even receive the message if they don't have
+   clients that need it. It handles the payload directly to the respective
+   subscription, and it will route the payload to their clients.
+9. WS Client receives the payload and routes it to respective Subscription.
+```
 
 ## Current development status: Help Wanted!
 
@@ -114,10 +140,35 @@ docker run -d \
 
 ## Other repositories directly related with this
 
+### Shared libraries
+
+#### [pattern-to-id](https://github.com/realizehit/pattern-to-id) [![Build Status](https://travis-ci.org/realizehit/pattern-to-id.svg?branch=master)](https://travis-ci.org/realizehit/pattern-to-id)
+Handles different pattern definition conversion into an unique hash-based id.
+
+#### [subscription](https://github.com/realizehit/subscription) [![Build Status](https://travis-ci.org/realizehit/subscription.svg?branch=master)](https://travis-ci.org/realizehit/subscription)
+Subscription Class definition, it has been used as a parent Subscription
+class on other repos.
+
+#### [publisher](https://github.com/realizehit/publisher) [![Build Status](https://travis-ci.org/realizehit/publisher.svg?branch=master)](https://travis-ci.org/realizehit/publisher)
+Publishes payloads directly into a **redis** server. It should be only used
+when you don't want/need to deploy an API server. It doesn't have the same
+naming pattern as clients do because we don't plan to make it available on
+other languages, since probably its more secure to make them pass over
+the API server.
+
 ### Servers
 
 #### [server-api](https://github.com/realizehit/server-api) [![Build Status](https://travis-ci.org/realizehit/server-api.svg?branch=master)](https://travis-ci.org/realizehit/server-api)
+Handles payloads publishment and in a near future it would also be used to
+fetch metrics from other services.
+
+Basically it is the bridge between Api Clients and Redis.
+
 #### [server-ws](https://github.com/realizehit/server-ws) [![Build Status](https://travis-ci.org/realizehit/server-ws.svg?branch=master)](https://travis-ci.org/realizehit/server-ws)
+Handles clients connections, client & subscription relation management,
+redis sub based on active subscriptions and so on.
+
+Basically it is the bridge between Redis and WebSocket clients.
 
 ### Javascript Clients
 
