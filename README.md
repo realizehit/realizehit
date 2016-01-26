@@ -100,29 +100,115 @@ somewhere.
 
 ## Usage
 
-#### (Not Implemented Yet) Run on command-line
+### With individual NPM packages
+
+#### Creating an API and WS Server on the same port
 
 ```bash
-npm install -g realizehit
-realizehit
-```
-
-#### Run as NPM module
-
-```bash
-npm install --save realizehit
+npm i --save realizehit-server-api realizehit-server-ws
 ```
 
 ```javascript
-var RealizehitServer = require( 'realizehit' )
+var APIServer = require( 'realizehit-server-api' )
+var WSServer = require( 'realizehit-server-ws' )
+var http = require( 'http' )
 
-var server = new RealizehitServer({
-    httpPort: '8080',
-    redis: 'redis://redis.ip.or.hostname:6379'
+var httpServer = http.createServer().listen( 8080 )
+
+var websocketServer = new WSServer({ httpServer: httpServer })
+var apiServer = new APIServer({ httpServer: httpServer })
+```
+
+[Read more about Web Socket Server](https://github.com/realizehit/server-ws)
+[Read more about API Server](https://github.com/realizehit/server-api)
+
+#### Subscribing over WebSocket Server using WebSocket Client
+
+```bash
+npm i --save realizehit-client-ws
+```
+
+```javascript
+var WSClient = require( 'realizehit-client-ws' )
+var client = new WSClient( 'ws://realizehit.example.com/' )
+
+// Publish something cool
+client.subscribe({ kind: 'news', channel: 'CNN' })
+    .on( 'subscribed', function () {
+        console.log( 'yolo!!1' )
+    })
+    .on( 'payload', function ( payload ) {
+        console.log( payload ) // will log payloads from channel:CNN|kind:news
+    })
+    .on( 'unsubscribed', function () {
+        console.log( 'ohno!!1' )
+    })
+
+// Save subscription instead of chaining
+var subscription = client.subscribe({ foo: 'bar' })
+
+if ( subscription.subscribing() ) {
+    subscription.once( 'subscribed', function () {
+        subscription.unsubscribe()
+    })
+}
+
+```
+
+#### Publishing over API Server using API Client 
+
+```bash
+npm i --save realizehit-client-api
+```
+
+```javascript
+var APIClient = require( 'realizehit-client-api' )
+var client = new APIClient( 'https://realizehit.example.com/' )
+
+// Publish something cool
+client.publish(
+    // On
+    {
+        kind: 'news',
+        channel: 'CNN'
+    },
+    {
+        id: 'deeznuts',
+        title: 'deez nuts went viral',
+        body: 'this might seem crazy, but right now I am lazy to write some textzy'
+    }
+)
+
+// Callbacks? I promise not!!
+client
+.publish({ foo: 'bar' }, 'amazing' )
+.then(function () {
+    console.log( 'I am a dummy message, just to warn everything went ok' )
+})
+.catch(function ( err ) {
+    console.log( 'Dope!!1 Simpsons error here' )
 })
 ```
 
-#### Run with Docker
+#### Publishing directly to Redis
+
+```bash
+npm i --save realizehit-publisher
+```
+
+```javascript
+var Publisher = require( 'realizehit-publisher' )
+
+var publisher = new Publisher( 'redis://redis-host:6379' )
+
+// Publish a payload into { foo: 'bar' } subscription
+publisher.publish(
+    { foo: 'bar' },
+    'Hello world'
+)
+```
+
+### Run with Docker
 
 ```bash
 docker run -d --name=redis redis
