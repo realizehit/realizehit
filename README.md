@@ -57,7 +57,7 @@ Want to contribute with your knowledge? [Contact me by email](mailto:jose.moreir
 
 ## History
 
-Since findhit was developed it had a lot of realtime communication dependencies  
+Since [findhit](https://www.findhit.com/) was developed it had a lot of realtime communication dependencies  
 with web-clients.
 
 At first development stage we relied on an excellent realtime service that you
