@@ -119,8 +119,9 @@ var websocketServer = new WSServer({ httpServer: httpServer })
 var apiServer = new APIServer({ httpServer: httpServer })
 ```
 
-[Read more about Web Socket Server](https://github.com/realizehit/server-ws)
-[Read more about API Server](https://github.com/realizehit/server-api)
+[more about Web Socket Server](https://github.com/realizehit/server-ws)
+
+[more about API Server](https://github.com/realizehit/server-api)
 
 #### Subscribing over WebSocket Server using WebSocket Client
 
@@ -154,6 +155,9 @@ if ( subscription.subscribing() ) {
 }
 
 ```
+
+[more about WS JS Client](https://github.com/realizehit/client-ws.js)
+
 
 #### Publishing over API Server using API Client 
 
@@ -190,6 +194,9 @@ client
 })
 ```
 
+[more about API JS Client](https://github.com/realizehit/client-api.js)
+
+
 #### Publishing directly to Redis
 
 ```bash
@@ -207,6 +214,9 @@ publisher.publish(
     'Hello world'
 )
 ```
+
+[more about publisher](https://github.com/realizehit/publisher)
+
 
 ### Run with Docker
 
