@@ -32,10 +32,7 @@
 9. WS Client receives the payload and routes it to respective Subscription.
 ```
 
-## Current development status: Help Wanted!
-
-This project is currently on a developing stage, watch and rate this repo for future
-acknowledge.
+## Current development status: Help wanted for building clients for other languages!
 
 **We need your help to write clients on other languages!!**
 
